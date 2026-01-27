@@ -93,18 +93,17 @@ const projects: Project[] = [
     image: "/ch01.jpg", 
     detailImages: ["/ch01.jpg", "/ch02.png", "/ch03.png", "/ch04.png", "/ch05.png", "/ch06.png", "/ch07.png", "/ch08.png"], 
     bgColor: "bg-[#4ECDC4]", 
-    description: "'Divine Healing Persona'를 컨셉으로, 신의 축복을 시각화한 캐릭터 '아우라리아(Auraria)'입니다. 고전적인 성녀의 이미지를 현대적으로 재해석하여 황금빛 치유 에너지를 표현했으며, SD 캐릭터와 굿즈 확장을 고려한 견고한 유니버스를 설계했습니다."
-  },
+    description: `캐릭터가 가진 고유한 서사와 매력을 시각적 언어로 치환하여 독창적인 비주얼 정체성을 구축하는 데 집중합니다. 매체 환경에 구애받지 않는 견고한 디자인 가이드를 바탕으로, 단순한 시각물을 넘어 생명력 있는 브랜드 자산으로서의 캐릭터를 완성합니다.`},
   {
     id: 4,
     title: "Illustration",
     category: "Digital Artwork",
-    date: "2026", 
+    date: "2024/2025", 
     tools: ["Procreate"], 
     image: "/ill01.png", 
     detailImages: ["/ill01.png", "/ill02.png", "/ill03.png", "/ill04.jpg"], 
     bgColor: "bg-[#95E1D3]", 
-    description: "빛과 공기의 흐름을 담아내는 테크니컬 일러스트레이션입니다. 유사 색상의 중첩 기법(Layering)으로 공간의 깊이감을 부여하고, 역광 연출과 원근감을 활용해 계절 특유의 온도와 서사를 시각적으로 구현했습니다."
+    description: "빛과 색의 조화로운 변주를 통해 대상의 서사를 시각적으로 요약하고, 일러스트레이션 특유의 감성적인 무드를 정교하게 구현합니다. 단순한 아트웍을 넘어, 대상의 본질을 꿰뚫는 디테일과 감각적인 표현으로 보는 이에게 깊은 시각적 몰입감을 선사합니다."
   },
   {
     id: 5,
@@ -115,7 +114,7 @@ const projects: Project[] = [
     image: "/3d01.png", 
     detailImages: ["/3d01.png", "/3d08.png", "/3d09.png", "/3d10.png", "/3d02.png", "/3d03.png", "/3d06.png", "/3d07.png", "/3d04.png", "/3d05.png", "/3d18.png", "/3d15.png", "/3d16.png", "/3d17.png", "/3d14.png", "/3d13.png", "/3d12.png", "/3d11.png"],
     bgColor: "bg-[#A8DADC]", 
-    description: "저사양 환경 최적화를 위한 효율적인 로우폴리(Low-poly) 구조 설계와 세계관 확장을 동시에 고려한 3D 프로젝트입니다. 배경 요소와 캐릭터 간의 시각적 통일감을 유지하며 아기자기한 세계관을 입체적으로 구현했습니다."
+    description: "효율적인 로우폴리(Low-poly) 구조 설계와 정교한 텍스처링을 통해 저사양 환경에서도 최상의 퍼포먼스를 구현하는 데 집중합니다. 캐릭터와 배경 오브젝트 간의 시각적 통일성을 유지하며, 단순한 모델링을 넘어 이야기가 느껴지는 입체적인 세계관을 구축합니다."
   },
   {
     id: 6,
@@ -138,7 +137,7 @@ const projects: Project[] = [
     image: "/com04.png", 
     detailImages: ["/com04.png", "/com05.png", "/com06.png"],
     bgColor: "bg-[#FF6B6B]", 
-    description: "게임 '젠레스 존 제로'의 고채도 비주얼 전략과 모바일 UX를 결합한 커머스 디자인입니다. '혜택 각인-탐색-리워드'로 이어지는 구매 여정을 설계하고, 정보의 요약화와 시각적 앵커를 활용해 이탈률을 최소화했습니다."
+    description: "정보의 우선순위를 고려한 타이포그래피 설계로 가독성을 높이고, 브랜드의 톤앤매너를 반영한 비주얼로 사용자의 시선과 클릭을 유도했습니다. 매체 환경에 최적화된 레이아웃과 시각적 스토리텔링을 통해 마케팅 성과를 극대화하는 상업적 결과물을 제안합니다."
   }
 ];
 

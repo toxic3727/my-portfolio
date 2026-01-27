@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* 기본 상태 (라이트 모드) */
+    .k-stem { fill: #2C2C2C; transition: fill 0.3s; }
+    .k-arm { fill: #C5A572; }
+    .k-leg { fill: #8E8E8E; } /* 라이트 모드에서는 다리를 조금 더 진하게 */
+
+    /* 다크 모드 감지 시 자동 전환 */
+    @media (prefers-color-scheme: dark) {
+      .k-stem { fill: #F5F5F0; } /* 기둥을 밝은 크림색으로 변경 */
+      .k-arm { fill: #FFD700; }  /* 골드를 더 선명하게 */
+      .k-leg { fill: #D1D1D1; }  /* 다리 가독성 확보 */
+    }
+  </style>
+
+  <rect class="k-stem" x="8" y="4" width="18" height="56" rx="2" />
+
+  <path class="k-arm" d="M24 30L48 6H62L38 30H24Z" />
+
+  <path class="k-leg" d="M34 34L58 58H44L20 34H34Z" />
+  
+  <rect class="k-arm" x="18" y="28" width="22" height="6" />
+</svg>

@@ -19,7 +19,6 @@ const FontStyles = () => (
 );
 
 // --- 1. 스마트 이미지 컴포넌트 ---
-// 와이어프레임/투명 이미지를 위해 하얀색 배경(bg-white)을 적용했습니다.
 const SmartImage = ({ src }: { src: string }) => {
   const [isLandscape, setIsLandscape] = useState(true);
 
@@ -61,14 +60,14 @@ interface Project {
   description: string;
 }
 
-// --- 3. 프로젝트 데이터 (업데이트된 설명 반영) ---
+// --- 3. 프로젝트 데이터 (포스터 상세 설명 업데이트) ---
 const projects: Project[] = [
   {
     id: 1,
     title: "Sign Design",
     category: "Wayfinding & Branding",
     date: "2025", 
-    tools: ["Ai", "Ps"], 
+    tools: ["Illustrator", "Photoshop"], 
     image: "/si02.png", 
     detailImages: ["/si02.png", "/si03.png", "/si01.png", "/si04.png"], 
     bgColor: "bg-[#FFD700]", 
@@ -79,7 +78,7 @@ const projects: Project[] = [
     title: "Fancy & Product",
     category: "Stationery Design",
     date: "2025",
-    tools: ["Ai", "Ps"],
+    tools: ["Illustrator", "Photoshop"],
     image: "/com01.png", 
     detailImages: ["/com01.png", "/com02.png", "/com03.png"],
     bgColor: "bg-[#FFB7B7]", 
@@ -90,7 +89,7 @@ const projects: Project[] = [
     title: "Character Design",
     category: "Brand Mascot & IP",
     date: "2025",
-    tools: ["Generative AI", "Ps"], 
+    tools: ["Illustrator", "Photoshop"], 
     image: "/ch01.jpg", 
     detailImages: ["/ch01.jpg", "/ch02.png", "/ch03.png", "/ch04.png", "/ch05.png", "/ch06.png", "/ch07.png", "/ch08.png"], 
     bgColor: "bg-[#4ECDC4]", 
@@ -101,7 +100,7 @@ const projects: Project[] = [
     title: "Illustration",
     category: "Digital Artwork",
     date: "2026", 
-    tools: ["Procreate", "Ps"], 
+    tools: ["Procreate"], 
     image: "/ill01.png", 
     detailImages: ["/ill01.png", "/ill02.png", "/ill03.png", "/ill04.jpg"], 
     bgColor: "bg-[#95E1D3]", 
@@ -112,7 +111,7 @@ const projects: Project[] = [
     title: "3D Modeling",
     category: "Character & Texture",
     date: "2025",
-    tools: ["Blender", "Ae"], 
+    tools: ["Blender"], 
     image: "/3d01.png", 
     detailImages: ["/3d01.png", "/3d08.png", "/3d09.png", "/3d10.png", "/3d02.png", "/3d03.png", "/3d06.png", "/3d07.png", "/3d04.png", "/3d05.png", "/3d18.png", "/3d15.png", "/3d16.png", "/3d17.png", "/3d14.png", "/3d13.png", "/3d12.png", "/3d11.png"],
     bgColor: "bg-[#A8DADC]", 
@@ -123,18 +122,19 @@ const projects: Project[] = [
     title: "Poster Design",
     category: "Graphic Design",
     date: "2025",
-    tools: ["InDesign", "Ps"], 
+    tools: ["InDesign", "Photoshop", "Illustrator"], 
     image: "/po01.png", 
     detailImages: ["/po01.png", "/po02.png", "/po03.png", "/po04.png", "/po05.png"], 
     bgColor: "bg-[#F7D794]", 
-    description: "전통과 미래, 힐링을 아우르는 그래픽 포스터 시리즈입니다. 드론의 궤적을 빛의 곡선으로 표현해 속도감을 시각화하거나, 서정적인 오브젝트 배치와 볼드한 타이포그래피의 대비를 통해 메시지 전달력을 높였습니다."
+    description: `포스터는 브랜드의 목소리를 시각적으로 요약하는 가장 강력한 매체입니다. 각 도메인의 고유한 무드(Mood)를 분석하여 색채와 형태, 타이포그래피의 변주를 통해 '말하지 않아도 느껴지는' 직관적인 서사를 구축하는 것을 목표로 합니다.
+`
   },
   {
     id: 7,
     title: "Commerce & SNS",
     category: "Digital Marketing",
     date: "2025",
-    tools: ["Ps", "Generative AI"], 
+    tools: ["Photoshop", "Illustrator"], 
     image: "/com04.png", 
     detailImages: ["/com04.png", "/com05.png", "/com06.png"],
     bgColor: "bg-[#FF6B6B]", 
@@ -156,7 +156,6 @@ export default function Portfolio() {
   const [themeIndex, setThemeIndex] = useState(0);
   const currentTheme = themes[themeIndex];
   
-  // 패럴랙스 스크롤 효과
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const y2 = useTransform(scrollY, [0, 500], [0, -150]);
@@ -187,7 +186,7 @@ export default function Portfolio() {
       </header>
 
       <main>
-        {/* Hero Section (패럴랙스 적용) */}
+        {/* Hero Section */}
         <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden pt-10">
           <motion.div style={{ y: y1 }} className="text-center z-20 relative -mb-12 md:-mb-20 pointer-events-none">
             <motion.p 
@@ -267,8 +266,8 @@ export default function Portfolio() {
         {/* Gallery Section */}
         <section id="more-work" className="px-6 py-20 max-w-7xl mx-auto">
           <motion.div 
-             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-             className="mb-12 border-b border-white/20 pb-4"
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              className="mb-12 border-b border-white/20 pb-4"
           >
             <h3 className="text-3xl md:text-5xl font-bold uppercase">All Projects</h3>
           </motion.div>
@@ -316,7 +315,6 @@ export default function Portfolio() {
               <button onClick={() => setSelectedProject(null)} className="absolute top-6 right-6 z-50 p-2 bg-white text-black rounded-full hover:bg-gray-200 transition-colors"><X size={24} /></button>
               
               <div className="p-8 md:p-12">
-                {/* 상단 정보 */}
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
                   <span className="font-bold tracking-widest uppercase text-sm" style={{ color: currentTheme.accent }}>
                     {selectedProject.category}
@@ -333,7 +331,6 @@ export default function Portfolio() {
                   {selectedProject.title}
                 </motion.h2>
 
-                {/* 사용 툴 태그 */}
                 <div className="flex flex-wrap gap-2 mb-8">
                   {selectedProject.tools.map((tool, i) => (
                     <span key={i} className="px-3 py-1 bg-white/10 rounded-full text-xs font-bold tracking-wider uppercase border border-white/5">
@@ -344,17 +341,38 @@ export default function Portfolio() {
 
                 <motion.p 
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
-                  className="text-xl mb-12 border-l-4 pl-6 leading-relaxed text-gray-200" style={{ borderColor: currentTheme.accent }}>
+                  className="text-xl mb-12 border-l-4 pl-6 leading-relaxed text-gray-200 whitespace-pre-wrap" style={{ borderColor: currentTheme.accent }}>
                   {selectedProject.description}
                 </motion.p>
+
+                {/* 포스터 디자인 프로젝트 전용 상세 정보 박스 */}
+                {selectedProject.id === 6 && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
+                    className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm opacity-80"
+                  >
+                    <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                      <h5 className="font-bold mb-3 text-white flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: currentTheme.accent }} />
+                        Design Focus
+                      </h5>
+                      <p className="leading-relaxed">그리드 시스템 기반의 레이아웃, 커스텀 타이포그래피 설계, 시각적 메타포를 활용한 스토리텔링</p>
+                    </div>
+                    <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                      <h5 className="font-bold mb-3 text-white flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: currentTheme.accent }} />
+                        Technical Skills
+                      </h5>
+                      <p className="leading-relaxed">Adobe Illustrator, Photoshop, InDesign (인쇄 공정 및 CMYK 색상 최적화)</p>
+                    </div>
+                  </motion.div>
+                )}
                 
-                {/* 스마트 이미지 갤러리 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-max">
                   {selectedProject.detailImages?.map((img, index) => (
                     <SmartImage key={index} src={img} />
                   ))}
                 </div>
-
               </div>
             </motion.div>
           </motion.div>

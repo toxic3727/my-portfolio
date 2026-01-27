@@ -12,22 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ▼▼▼ 이 부분이 수정되었습니다 ▼▼▼
+// app/layout.tsx
+
 export const metadata: Metadata = {
+  // ▼▼▼ 이 한 줄을 추가하면 터미널의 노란색 경고가 사라집니다 ▼▼▼
+  metadataBase: new URL("https://my-portfolio-flax-nine-75.vercel.app"), 
+  
   title: "디자이너 김재원 | Smart Tech, Fine Visual",
   description: "스마트한 기술 활용과 정교한 시각화로 결과의 차이를 만드는 디자이너 김재원입니다.",
   icons: {
     icon: "/icon.svg",
   },
-  // ▼▼▼ 여기부터 추가된 부분입니다 ▼▼▼
   openGraph: {
     title: "디자이너 김재원 | Smart Tech, Fine Visual",
     description: "스마트한 기술 활용과 정교한 시각화로 결과의 차이를 만드는 디자이너 김재원입니다.",
-    url: "https://jaewon-kim.vercel.app", // (나중에 실제 배포 주소로 바꿔야 함)
+    // ▼▼▼ 실제 주소로 업데이트했습니다 ▼▼▼
+    url: "https://my-portfolio-flax-nine-75.vercel.app", 
     siteName: "Kim Jae Won Portfolio",
     images: [
       {
-        url: "/og-image.png", // public 폴더에 넣을 이미지 이름
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Kim Jae Won Portfolio Preview",
@@ -36,7 +40,6 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     type: "website",
   },
-  // ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 };
 
 export default function RootLayout({

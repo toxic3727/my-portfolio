@@ -329,7 +329,7 @@ export default function Portfolio() {
         </section>
       </main>
 
-      {/* --- About Me Section (유지됨) --- */}
+      {/* --- About Me Section (자기소개 원본 유지 + CV 버튼 추가) --- */}
       <section id="about" className="py-32 px-6 max-w-7xl mx-auto border-t border-white/10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }} 
@@ -348,6 +348,18 @@ export default function Portfolio() {
             <p className="mt-6 text-lg opacity-70 leading-relaxed">
             AI와 최신 기술을 디자인 워크플로우에 적극적으로 활용하여, 상상력의 경계를 넓히는 동시에 실무적으로 즉시 기능할 수 있는 '살아있는 디자인'을 제안하는 것이 저의 강점입니다.
             </p>
+
+             {/* ▼ 추가된 Download CV 버튼 (디자인 통일) ▼ */}
+             <motion.a
+              href="/디자이너_김재원_CV_2025.pdf" 
+              download="디자이너_김재원_CV_2025.pdf"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block mt-8 px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm shadow-2xl transition-all duration-300 border border-white/20"
+              style={{ backgroundColor: currentTheme.accent, color: '#fff' }}
+            >
+              Download CV
+            </motion.a>
           </div>
 
           {/* 오른쪽: 스킬 및 연락처 (유지) */}
@@ -384,7 +396,7 @@ export default function Portfolio() {
               </h5>
               <div className="space-y-2 text-lg opacity-80">
                 <p>📧 kimjw0225@gmail.com</p>
-                <p>📍  JinJu, South Korea</p>
+                <p>📍  JinJu, South Korea</p>
                 <p>🔗 github.com/toxic3727</p>
               </div>
             </div>
